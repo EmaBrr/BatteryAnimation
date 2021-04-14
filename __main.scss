@@ -1,0 +1,117 @@
+body {
+  width: 100%;
+  height: 100vh;
+  .wrapper {
+    width: 800px;
+    height: 350px;
+    margin-left: calc(50% - 400px);
+    margin-top: 250px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .battery__body {
+      width: 750px;
+      height: 300px;
+      border: 7px solid black;
+      border-radius: 8px;
+      float: left;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      .column {
+        width: calc(100% / 4);
+        float: left;
+        height: 92%;
+        margin: 10px;
+        border-radius: 8px;
+      }
+      .first {
+        animation-name: charging1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation: charging1 3s steps(1) infinite;
+        @keyframes charging1 {
+          0% {
+            background-color: red;
+          }
+          25% {
+            background-color: orange;
+          }
+          50% {
+            background-color: yellow;
+          }
+          75% {
+            background-color: green;
+          }
+        }
+      }
+      .second {
+        animation-name: charging2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation: charging2 3s steps(1) infinite;
+        @keyframes charging2 {
+          0% {
+            background-color: white;
+          }
+          25% {
+            background-color: orange;
+          }
+          50% {
+            background-color: yellow;
+          }
+          75% {
+            background-color: green;
+          }
+        }
+      }
+      .third {
+        animation-name: charging3;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation: charging3 3s steps(1) infinite;
+        @keyframes charging3 {
+          0% {
+            background-color: white;
+          }
+          25% {
+            background-color: white;
+          }
+          50% {
+            background-color: yellow;
+          }
+          75% {
+            background-color: green;
+          }
+        }
+      }
+      .fourth {
+        animation-name: charging4;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation: charging4 3s steps(1) infinite;
+        @keyframes charging4 {
+          0% {
+            background-color: white;
+          }
+          25% {
+            background-color: white;
+          }
+          50% {
+            background-color: white;
+          }
+          75% {
+            background-color: green;
+          }
+        }
+      }
+    }
+  }
+  .battery__detail {
+    width: 5%;
+    height: 50%;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 0px 8px 8px 0px;
+  }
+}
