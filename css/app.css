@@ -100,6 +100,16 @@ body .wrapper {
   align-items: center;
 }
 
+@media (max-width: 780px) {
+  body .wrapper {
+    width: 350px;
+    height: 800px;
+    margin-top: 100px;
+    display: inline-block;
+    margin-left: calc(50% - 175px);
+  }
+}
+
 body .wrapper .battery__body {
   width: 750px;
   height: 300px;
@@ -111,12 +121,33 @@ body .wrapper .battery__body {
   align-items: center;
 }
 
+@media (max-width: 780px) {
+  body .wrapper .battery__body {
+    width: 350px;
+    height: 750px;
+    float: none;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
+}
+
 body .wrapper .battery__body .column {
   width: calc(100% / 4);
   float: left;
   height: 92%;
   margin: 10px;
   border-radius: 8px;
+}
+
+@media (max-width: 780px) {
+  body .wrapper .battery__body .column {
+    width: 92%;
+    height: 150px;
+    float: none;
+    display: inline-block;
+  }
 }
 
 body .wrapper .battery__body .first {
@@ -128,16 +159,16 @@ body .wrapper .battery__body .first {
 
 @keyframes charging1 {
   0% {
-    background-color: red;
+    background-color: #b11111;
   }
   25% {
-    background-color: orange;
+    background-color: #e09406;
   }
   50% {
-    background-color: yellow;
+    background-color: #eeee1f;
   }
   75% {
-    background-color: green;
+    background-color: #066b06;
   }
 }
 
@@ -153,13 +184,13 @@ body .wrapper .battery__body .second {
     background-color: white;
   }
   25% {
-    background-color: orange;
+    background-color: #e09406;
   }
   50% {
-    background-color: yellow;
+    background-color: #eeee1f;
   }
   75% {
-    background-color: green;
+    background-color: #066b06;
   }
 }
 
@@ -178,10 +209,10 @@ body .wrapper .battery__body .third {
     background-color: white;
   }
   50% {
-    background-color: yellow;
+    background-color: #eeee1f;
   }
   75% {
-    background-color: green;
+    background-color: #066b06;
   }
 }
 
@@ -203,14 +234,23 @@ body .wrapper .battery__body .fourth {
     background-color: white;
   }
   75% {
-    background-color: green;
+    background-color: #066b06;
   }
 }
 
 body .battery__detail {
   width: 5%;
-  height: 50%;
+  height: 100px;
   background-color: black;
   border: 2px solid black;
   border-radius: 0px 8px 8px 0px;
+}
+
+@media (max-width: 780px) {
+  body .battery__detail {
+    width: 150px;
+    margin-left: calc(50% - 75px);
+    height: 3%;
+    border-radius: 0px 0px 8px 8px;
+  }
 }

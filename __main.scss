@@ -9,6 +9,13 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
+    @media (max-width: 780px) {
+      width: 350px;
+      height: 800px;
+      margin-top: 100px;
+      display: inline-block;
+      margin-left: calc(50% - 175px);
+    }
     .battery__body {
       width: 750px;
       height: 300px;
@@ -18,12 +25,27 @@ body {
       display: flex;
       justify-content: left;
       align-items: center;
+      @media (max-width: 780px) {
+        width: 350px;
+        height: 750px;
+        float: none;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+      }
       .column {
         width: calc(100% / 4);
         float: left;
         height: 92%;
         margin: 10px;
         border-radius: 8px;
+        @media (max-width: 780px) {
+          width: 92%;
+          height: 150px;
+          float: none;
+          display: inline-block;
+        }
       }
       .first {
         animation-name: charging1;
@@ -32,16 +54,16 @@ body {
         animation: charging1 3s steps(1) infinite;
         @keyframes charging1 {
           0% {
-            background-color: red;
+            background-color: rgb(177, 17, 17);
           }
           25% {
-            background-color: orange;
+            background-color: rgb(224, 148, 6);
           }
           50% {
-            background-color: yellow;
+            background-color: rgb(238, 238, 31);
           }
           75% {
-            background-color: green;
+            background-color: rgb(6, 107, 6);
           }
         }
       }
@@ -55,13 +77,13 @@ body {
             background-color: white;
           }
           25% {
-            background-color: orange;
+            background-color: rgb(224, 148, 6);
           }
           50% {
-            background-color: yellow;
+            background-color: rgb(238, 238, 31);
           }
           75% {
-            background-color: green;
+            background-color: rgb(6, 107, 6);
           }
         }
       }
@@ -78,10 +100,10 @@ body {
             background-color: white;
           }
           50% {
-            background-color: yellow;
+            background-color: rgb(238, 238, 31);
           }
           75% {
-            background-color: green;
+            background-color: rgb(6, 107, 6);
           }
         }
       }
@@ -101,7 +123,7 @@ body {
             background-color: white;
           }
           75% {
-            background-color: green;
+            background-color: rgb(6, 107, 6);
           }
         }
       }
@@ -109,9 +131,15 @@ body {
   }
   .battery__detail {
     width: 5%;
-    height: 50%;
+    height: 100px;
     background-color: black;
     border: 2px solid black;
     border-radius: 0px 8px 8px 0px;
+    @media (max-width: 780px) {
+      width: 150px;
+      margin-left: calc(50% - 75px);;
+      height: 3%;
+      border-radius: 0px 0px 8px 8px;
+    }
   }
 }
