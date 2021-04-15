@@ -90,6 +90,13 @@ body {
   height: 100vh;
 }
 
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 780px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+}
+
 body .wrapper {
   width: 800px;
   height: 350px;
@@ -102,11 +109,23 @@ body .wrapper {
 
 @media (max-width: 780px) {
   body .wrapper {
-    width: 350px;
-    height: 800px;
+    width: 250px;
+    height: 600px;
     margin-top: 100px;
     display: inline-block;
-    margin-left: calc(50% - 175px);
+    margin-left: calc(50% - 125px);
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 780px) {
+  body .wrapper {
+    width: 600px;
+    height: 250px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: calc(50% - 300px);
   }
 }
 
@@ -123,13 +142,26 @@ body .wrapper .battery__body {
 
 @media (max-width: 780px) {
   body .wrapper .battery__body {
-    width: 350px;
-    height: 750px;
+    width: 250px;
+    height: 600px;
     float: none;
     display: inline-block;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    padding: 3%;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 780px) {
+  body .wrapper .battery__body {
+    width: 600px;
+    height: 250px;
+    border: 7px solid black;
+    border-radius: 8px;
+    float: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
   }
 }
 
@@ -144,9 +176,19 @@ body .wrapper .battery__body .column {
 @media (max-width: 780px) {
   body .wrapper .battery__body .column {
     width: 92%;
-    height: 150px;
+    height: 120px;
     float: none;
     display: inline-block;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 780px) {
+  body .wrapper .battery__body .column {
+    width: calc(100% / 4);
+    float: left;
+    height: 92%;
+    margin: 10px;
+    border-radius: 8px;
   }
 }
 
@@ -239,8 +281,8 @@ body .wrapper .battery__body .fourth {
 }
 
 body .battery__detail {
-  width: 5%;
-  height: 100px;
+  width: 25px;
+  height: 160px;
   background-color: black;
   border: 2px solid black;
   border-radius: 0px 8px 8px 0px;
@@ -252,5 +294,15 @@ body .battery__detail {
     margin-left: calc(50% - 75px);
     height: 3%;
     border-radius: 0px 0px 8px 8px;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 780px) {
+  body .battery__detail {
+    width: 25px;
+    height: 160px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 0px 8px 8px 0px;
   }
 }
